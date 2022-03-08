@@ -34,12 +34,51 @@ if __name__ == '__main__':
     problema2_raiz = Nodo()
     problema3_raiz = Nodo()
 
+
+    ##Creando nodos de nuevo
+    raiz = Nodo(1, "A")
+    nodoB = Nodo(2, "B")
+    nodoC = Nodo(3, "C")
+    nodoD = Nodo(4, "D")
+    nodoE = Nodo(5, "E")
+    nodoF = Nodo(6, "F")
+    nodoG = Nodo(7, "G")
+    nodoH = Nodo(8, "H")
+    nodoI = Nodo(9, "I")
+    nodoJ = Nodo(10, "J")
+    nodoK = Nodo(11, "K")
+    nodoL = Nodo(12, "L")
+    nodoM = Nodo(13, "M")
+    nodoN = Nodo(14, "N")
+    nodoO = Nodo(15, "O")
+    nodoP = Nodo(15, "P")
+
+    raiz.__add__(nodoB, nodoC)
+    nodoB.__add__(nodoD, nodoE)
+    nodoE.__add__(nodoF, nodoG)
+    nodoF.__add__(nodoH)
+    nodoG.__add__(nodoI)
+
+
     print("Imprimiendo lista de nodos")
     for nodo in raiz.adyacentes:
         print(nodo)
 
     arbol1 = Arbol(raiz)
-    arbol1.recorridoAnchura(raiz)
+    recorrido = arbol1.recorridoProfundidadD(raiz)
+    print()
+    for i in recorrido:
+        print(i)
+
+    recorrido = arbol1.recorridoProfundidadI(raiz)
+    print()
+    for i in recorrido:
+        print(i)
+
+    recorrido = arbol1.recorridoAnchuraD(raiz)
+    print()
+    for i in recorrido:
+        print(i)
 
 '''
 Algoritmo de profundidad, utiliza una pila
